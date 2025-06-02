@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 const links = [
@@ -11,13 +11,43 @@ const links = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector("footer");
+      const navbar = document.getElementById("navbar");
+
+      if (footer && navbar) {
+        const footerPosition = footer.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (footerPosition <= windowHeight) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="sticky top-0 z-[1000] w-full py-2 bg-white transition-shadow">
+      <nav
+        id="navbar"
+        className={`sticky top-0 z-[1000] w-full py-2 bg-white transition-shadow ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 h-[5.5rem] flex items-center justify-between">
           <a href="/" className="flex items-center space-x-2">
             <img src="/images/i1.webp" className="h-[5.5rem]" alt="logo" />
