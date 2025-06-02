@@ -20,11 +20,7 @@ const Navbar = () => {
       <nav className="sticky top-0 z-[1000] w-full py-2 bg-white transition-shadow">
         <div className="max-w-7xl mx-auto px-4 h-[5.5rem] flex items-center justify-between">
           <a href="/" className="flex items-center space-x-2">
-            <img
-              src="/public/images/i1.webp"
-              className="h-[5.5rem]"
-              alt="logo"
-            />
+            <img src="/images/i1.webp" className="h-[5.5rem]" alt="logo" />
           </a>
 
           {/* Desktop nav */}
