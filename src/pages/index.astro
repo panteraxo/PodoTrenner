@@ -1,19 +1,66 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Carousel from "../sections/Carousel.jsx";
 import Presentation from "../sections/Presentation.astro";
 import Address from "../sections/Address.astro";
 import AboutMe from "../sections/AboutMe.astro";
-import BlogSection from "../sections/BlogSection.astro";
+import Contact from "../sections/Contact.astro";
+import Specifics from "../sections/Specifics.astro";
+import Welcome from "../sections/Welcome.astro";
+import Cut from "../sections/Cut.astro";
+import Cut2 from "../sections/Cut2.astro";
+import Cut3 from "../sections/Cut3.astro";
+import Cut4 from "../sections/Cut4.astro";
+import Form from "../sections/Form.astro";
+import FAQ from "../sections/FAQ.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Inicio">
-  <Carousel client:load />
+<Layout title="Start - Esther Trenner Podologie">
   <Presentation />
+  <Welcome />
+  <Specifics />
+  <Cut />
   <Address />
+  <Cut2 />
   <AboutMe />
-  <BlogSection />
+
+  <Cut3 />
+  <Form />
+  <Contact />
+  <Cut4 />
+  <FAQ />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target;
+              if (target.id === "p1" || target.id === "p3") {
+                target.classList.add("animate-left");
+              } else if (target.id === "p2" || target.id === "p4") {
+                target.classList.add("animate-right");
+              }
+              observer.unobserve(target); // para que solo se animen una vez
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      const p1 = document.getElementById("p1");
+      const p2 = document.getElementById("p2");
+      const p3 = document.getElementById("p3");
+      const p4 = document.getElementById("p4");
+
+      if (p1) observer.observe(p1);
+      if (p2) observer.observe(p2);
+      if (p3) observer.observe(p3);
+      if (p4) observer.observe(p4);
+    });
+  </script>
 </Layout>
