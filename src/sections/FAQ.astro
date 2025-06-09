@@ -3,17 +3,41 @@
   <div class="m-2 space-y-2 h-[60vh] my-[15rem]">
     <div
       class="group flex flex-col gap-2 rounded-lg bg-1 p-5 text-white"
-      tabindex="1"
+      tabindex="0"
+      id="toggleBtn0"
     >
-      <button class="flex cursor-pointer items-center justify-between">
-        <span> Sind die Instrumente sterilisiert? </span>
+      <button class="flex w-full cursor-pointer items-center justify-between">
+        <span> Was bedeutet Podologische Behandlung? </span>
         <img
+          id="chevron0"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-          class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+          class="h-2 w-3 transition-all duration-500"
         />
       </button>
       <div
-        class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+        id="content0"
+        class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
+      >
+        Fachgerechte Pflege und Behandlung von Fußproblemen zur Förderung der
+        Fußgesundheit.
+      </div>
+    </div>
+    <div
+      class="group flex flex-col gap-2 rounded-lg bg-1 p-5 text-white"
+      tabindex="1"
+      id="toggleBtn1"
+    >
+      <button class="flex w-full cursor-pointer items-center justify-between">
+        <span> Sind die Instrumente sterilisiert? </span>
+        <img
+          id="chevron1"
+          src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+          class="h-2 w-3 transition-all duration-500"
+        />
+      </button>
+      <div
+        id="content1"
+        class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
         Ja, alle Instrumente werden nach jeder Behandlung gemäß den geltenden
         Hygienevorschriften sorgfältig gereinigt, desinfiziert und sterilisiert.
@@ -23,16 +47,19 @@
     <div
       class="group flex flex-col gap-2 rounded-lg bg-1 p-5 text-white"
       tabindex="2"
+      id="toggleBtn2"
     >
-      <div class="flex cursor-pointer items-center justify-between">
+      <button class="flex w-full cursor-pointer items-center justify-between">
         <span> Wie lange dauert eine podologische Sitzung? </span>
         <img
+          id="chevron2"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-          class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+          class="h-2 w-3 transition-all duration-500"
         />
-      </div>
+      </button>
       <div
-        class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+        id="content2"
+        class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
         Eine Behandlung dauert in der Regel etwa 40 Minuten.
       </div>
@@ -41,52 +68,63 @@
     <div
       class="group flex flex-col gap-2 rounded-lg bg-1 p-5 text-white"
       tabindex="3"
+      id="toggleBtn3"
     >
-      <div class="flex cursor-pointer items-center justify-between">
+      <button class="flex w-full cursor-pointer items-center justify-between">
         <span> Was muss ich zum ersten Termin mitbringen? </span>
         <img
+          id="chevron3"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-          class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+          class="h-2 w-3 transition-all duration-500"
         />
-      </div>
+      </button>
       <div
-        class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+        id="content3"
+        class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
         Sie müssen nichts mitbringen – kommen Sie einfach pünktlich zu Ihrem
         Termin.
       </div>
     </div>
+
     <div
       class="group flex flex-col gap-2 rounded-lg bg-1 p-5 text-white"
-      tabindex="3"
+      tabindex="4"
+      id="toggleBtn4"
     >
-      <div class="flex cursor-pointer items-center justify-between">
+      <button class="flex w-full cursor-pointer items-center justify-between">
         <span> Behandeln Sie auch Menschen mit Diabetes? </span>
         <img
+          id="chevron4"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-          class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+          class="h-2 w-3 transition-all duration-500"
         />
-      </div>
+      </button>
       <div
-        class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+        id="content4"
+        class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
         Ja, wir sind auf die Behandlung von Risikopatienten wie Diabetiker*innen
         spezialisiert und arbeiten besonders sorgfältig und schonend.
       </div>
     </div>
+
     <div
       class="group flex flex-col gap-2 rounded-lg bg-1 p-5 text-white"
-      tabindex="3"
+      tabindex="5"
+      id="toggleBtn5"
     >
-      <div class="flex cursor-pointer items-center justify-between">
+      <button class="flex w-full cursor-pointer items-center justify-between">
         <span> Welche Fußprobleme werden behandelt? </span>
         <img
+          id="chevron5"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-          class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+          class="h-2 w-3 transition-all duration-500"
         />
-      </div>
+      </button>
       <div
-        class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+        id="content5"
+        class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
         Wir behandeln eine Vielzahl von Beschwerden, unter anderem:
         Eingewachsene Nägel Hühneraugen (Clavus), Schwielen (Hyperkeratosen),
@@ -97,3 +135,22 @@
     </div>
   </div>
 </section>
+
+<script>
+  for (let i = 0; i <= 5; i++) {
+    const btn = document.getElementById(`toggleBtn${i}`);
+    const content = document.getElementById(`content${i}`);
+    const chevron = document.getElementById(`chevron${i}`);
+
+    btn.addEventListener("click", () => {
+      const isOpen = content.classList.contains("max-h-screen");
+
+      content.classList.toggle("max-h-0", isOpen);
+      content.classList.toggle("opacity-0", isOpen);
+      content.classList.toggle("max-h-screen", !isOpen);
+      content.classList.toggle("opacity-100", !isOpen);
+
+      chevron.classList.toggle("-rotate-180", !isOpen);
+    });
+  }
+</script>
