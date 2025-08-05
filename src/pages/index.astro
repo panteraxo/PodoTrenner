@@ -38,6 +38,21 @@ import FAQ from "../sections/FAQ.astro";
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const target = entry.target;
+
+              // Verificar el tamaño de pantalla (md = 768px)
+              const isSmallScreen = window.innerWidth < 768;
+
+              // Para p5-p10, no aplicar animaciones en pantallas pequeñas
+              const isP5ToP10 = ["p5", "p6", "p7", "p8", "p9", "p10"].includes(
+                target.id
+              );
+
+              if (isP5ToP10 && isSmallScreen) {
+                // No aplicar animación en pantallas pequeñas para p5-p10
+                observer.unobserve(target);
+                return;
+              }
+
               if (
                 target.id === "p1" ||
                 target.id === "p3" ||
