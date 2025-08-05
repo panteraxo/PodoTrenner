@@ -146,6 +146,8 @@
     --color-4: #3B4724;
     --color-5: #2D3322;
     --color-6: #30332B;
+    --color-7: #2E2E2E;
+    --color-8: #4B4B4B;
     --font-dm: "DM Serif Display", serif;
     --font-jost: "Jost", sans-serif;
     
@@ -173,14 +175,14 @@
 .pir{
     font-size:20px;
     font-weight: 600;
-    color :#1f194c;
+    color :#2E2E2E;
     margin: 1em 0;
 }
 .clip-diagonal {
     clip-path: polygon(0 0, 100% 100%, 0% 100%);
   }
 .par{
-    color:#575a7b;
+    
     font-size: 15px;
     line-height: 1.6;
     letter-spacing: 0.03em;
