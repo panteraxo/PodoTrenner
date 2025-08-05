@@ -2,52 +2,110 @@
 import "../styles/global.css";
 ---
 
-<section class="bg-white mt-[30vh]" id="aboutme">
+<section
+  class="relative py-16 h-[calc(100vh-5.5rem)] md:h-[calc(100vh-16rem)] mt-[16rem]"
+  id="aboutme"
+>
+  <img
+    src="/images/a4.webp"
+    alt="uber uns"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div class="absolute inset-0 bg-black/30"></div>
   <div
-    class="grid grid-cols-6 md:grid-cols-8 items-center justify-center gap-8 p-6 md:p-24"
+    class="relative z-10 flex items-center h-full pt-[26rem] md:pt-[23rem] lg:pt-0 lg:max-w-2xl px-6 md:px-16 pb-32"
   >
-    <div id="p1" class="col-span-12 lg:col-span-3 md:mb-6 overflow-hidden">
-      <div class="w-full h-[50rem] overflow-hidden">
+    <div class="text-white w-full">
+      <h1
+        class="text-4xl md:text-4xl font-bold mb-4 font-dm text-center lg:text-left"
+      >
+        Über uns
+      </h1>
+      <p class="text-lg md:text-xl text-center lg:text-left">
+        Wir sind ein auf Podologie spezialisiertes Zentrum, das sich der
+        Gesundheit und dem Wohlbefinden Ihrer Füße widmet. Unser Ziel ist es,
+        sichere, wirksame und auf jede Person zugeschnittene Behandlungen
+        anzubieten - mit Professionalität, moderner Technik und einem
+        persönlichen Service.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="mb-[16rem]">
+  <div class="w-full max-w-6xl mx-auto px-4 py-10 space-y-10 mt-16">
+    <!-- Fila 1 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 mt-[16rem]">
+      <!-- Imagen -->
+      <div id="p5">
         <img
-          src="/images/perfil.JPG"
-          alt="Esther Trenner"
-          class="object-cover object-[center] w-full h-full"
+          src="/images/a2.webp"
+          alt="Descripción"
+          class="w-full h-auto rounded-lg shadow"
+        />
+      </div>
+
+      <!-- Texto -->
+      <div id="p6">
+        <h2 class="text-2xl md:text-4xl font-bold mb-2 font-dm">
+          Wir begleiten dich mit Einfühlungsvermögen bei jedem Schritt.
+        </h2>
+        <p class="text-gray-600 text-base md:text-2xl">
+          Unser Service zeichnet sich durch Nähe und Vertrauen aus. Vom ersten
+          Kontakt bis zur letzten Behandlung sorgen wir dafür, dass du dich
+          wohl, verstanden und gut aufgehoben fühlst.
+        </p>
+      </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div
+      class="flex flex-col md:grid md:grid-cols-2 items-center gap-6 mt-[16rem]"
+    >
+      <!-- Texto -->
+      <div id="p8" class="order-2 md:order-1">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2 font-dm">
+          Strenge Protokolle für deine Sicherheit.
+        </h2>
+        <p class="text-gray-600 text-base md:text-2xl">
+          Wir befolgen strenge Desinfektions- und Sterilisationsverfahren bei
+          jeder Behandlung. Unsere Instrumente werden sorgfältig aufbereitet, um
+          eine hygienische und risikofreie Erfahrung für deine Füße zu
+          gewährleisten.
+        </p>
+      </div>
+      <!-- Imagen -->
+      <div id="p7" class="order-1 md:order-2">
+        <img
+          src="/images/a8.webp"
+          alt="Descripción"
+          class="w-full h-auto rounded-lg shadow"
         />
       </div>
     </div>
-    <div
-      id="p2"
-      class="col-span-12 lg:col-span-5 items-start justify-center lg:pr-32 text-center lg:text-left"
-    >
-      <h2 class="text-5xl md:text-6xl font-dm text-2 mb-1">Esther Trenner</h2>
-      <br />
-      <h3 class="text-lg md:text-xl font-semibold font-jost text-black mb-4">
-        Podologin – Inhaberin der Praxis
-      </h3>
-      <br />
-      <p class="text-black">
-        Geboren in Peru, lebe ich seit 25 Jahren in Berlin. Nach jahrelanger
-        Tätigkeit in der Krankenpflege und einer abgeschlossenen Ausbildung zur
-        Altenpflegerin 2015/2020 habe ich eine zusätzliche Ausbildung an der
-        Podologieschule in Berlin erfolgreich absolviert.
-      </p>
-      <br />
-      <p class="text-black">
-        Während meiner gesamten beruflichen Laufbahn habe ich ständig erlebt,
-        wie wichtig gepflegte und gesunde Füße für das Wohlbefinden und die
-        Gesundheit eines jeden Menschen sind.
-      </p>
-      <br />
-      <p class="text-black">
-        Dieser Aufgabe möchte ich mich zukünftig mit vollem Einsatz widmen und
-        das Beste zum Wohlergehen meiner Patientinnen und Patienten erreichen.
-      </p>
-      <br />
-      <p class="text-black">
-        Die Praxis ist verkehrsgünstig gelegen. Sie befindet sich direkt am
-        Bahnhof/Busbahnhof Falkensee. Wir haben ausreichend Parkplätze direkt
-        vor der Praxis. Der Zugang zur Praxis ist barrierefrei.
-      </p>
+    <!-- Fila 3 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 mt-[16rem]">
+      <!-- Imagen -->
+      <div id="p9">
+        <img
+          src="/images/a10.webp"
+          alt="Descripción"
+          class="w-full h-auto rounded-lg shadow"
+        />
+      </div>
+
+      <!-- Texto -->
+      <div id="p10">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2 font-dm">
+          Erfahrung und Fachwissen für deine Fußgesundheit.
+        </h2>
+        <p class="text-gray-600 text-base md:text-2xl">
+          Unsere Podologen sind bestens ausgebildet und bereit, sowohl einfache
+          Pflege als auch komplexere Probleme zu behandeln. Wir kümmern uns mit
+          Präzision, Hingabe und Professionalität um deine Füße.
+        </p>
+      </div>
     </div>
+
+    <!-- Agrega más filas según sea necesario -->
   </div>
 </section>

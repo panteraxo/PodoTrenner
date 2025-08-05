@@ -38,9 +38,21 @@ import FAQ from "../sections/FAQ.astro";
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const target = entry.target;
-              if (target.id === "p1" || target.id === "p3") {
+              if (
+                target.id === "p1" ||
+                target.id === "p3" ||
+                target.id === "p5" ||
+                target.id === "p8" ||
+                target.id === "p9"
+              ) {
                 target.classList.add("animate-left");
-              } else if (target.id === "p2" || target.id === "p4") {
+              } else if (
+                target.id === "p2" ||
+                target.id === "p4" ||
+                target.id === "p6" ||
+                target.id === "p7" ||
+                target.id === "p10"
+              ) {
                 target.classList.add("animate-right");
               }
               observer.unobserve(target); // para que solo se animen una vez
@@ -56,11 +68,23 @@ import FAQ from "../sections/FAQ.astro";
       const p2 = document.getElementById("p2");
       const p3 = document.getElementById("p3");
       const p4 = document.getElementById("p4");
+      const p5 = document.getElementById("p5");
+      const p6 = document.getElementById("p6");
+      const p7 = document.getElementById("p7");
+      const p8 = document.getElementById("p8");
+      const p9 = document.getElementById("p9");
+      const p10 = document.getElementById("p10");
 
       if (p1) observer.observe(p1);
       if (p2) observer.observe(p2);
       if (p3) observer.observe(p3);
       if (p4) observer.observe(p4);
+      if (p5) observer.observe(p5);
+      if (p6) observer.observe(p6);
+      if (p7) observer.observe(p7);
+      if (p8) observer.observe(p8);
+      if (p9) observer.observe(p9);
+      if (p10) observer.observe(p10);
     });
   </script>
 </Layout>
