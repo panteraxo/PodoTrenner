@@ -1,4 +1,14 @@
 ---
+export async function getStaticPaths() {
+  const languages = ["de", "en", "es", "it"];
+
+  return languages.map((lang) => ({
+    params: { lang },
+    props: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
 import Layout from "../../layouts/Layout.astro";
 ---
 
