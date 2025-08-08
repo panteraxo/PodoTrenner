@@ -14,7 +14,21 @@ const {
   privacy,
   impressum,
   allRights,
+  currentLang,
 } = Astro.props;
+
+// Función para generar href dinámico manteniendo el idioma
+const getHref = (originalHref: string) => {
+  if (originalHref.startsWith("#")) {
+    return currentLang ? `/${currentLang}${originalHref}` : originalHref;
+  }
+  return originalHref;
+};
+
+// Función para páginas específicas con idioma
+const getPageHref = (page: string) => {
+  return currentLang ? `/${currentLang}${page}` : page;
+};
 ---
 
 <footer class="bg-white font-jost">
@@ -34,29 +48,25 @@ const {
         <div>
           <ul class="text-gray-800 font-medium te">
             <li>
-              <p>
-                {
-                  address.map((paragraph: string) => (
-                    <p class="leading-relaxed">{paragraph}</p>
-                  ))
-                }
-
-                <a href="tel:0332242298808" class="hover:underline">{phone}</a>
-                <br />
-                <a href="mailto:info@podo-trenner.de" class="hover:underline"
-                  >{email}</a
-                >
-                <br />
-                {addressOpen}
-                <br />
-                {range}
-                <br />
-                {
-                  range2.map((paragraph: string) => (
-                    <p class="leading-relaxed">{paragraph}</p>
-                  ))
-                }
-              </p>
+              <div class="space-y-1">
+                {address.map((line: string) => <div>{line}</div>)}
+                <div class="mt-2">
+                  <a
+                    href={`tel:${phone.replace(/\s/g, "")}`}
+                    class="hover:underline block">{phone}</a
+                  >
+                </div>
+                <div>
+                  <a href={`mailto:${email}`} class="hover:underline block"
+                    >{email}</a
+                  >
+                </div>
+                <div class="mt-2">
+                  <div>{addressOpen}</div>
+                  <div>{range}</div>
+                  <div set:html={range2} />
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -82,10 +92,14 @@ const {
         <div class="md:border-l border-5 pl-4">
           <ul class="text-gray-800 font-medium flex gap-6 md:gap-0 md:flex-col">
             <li class="mb-1">
-              <a href="/impressum" class="hover:underline">{impressum}</a>
+              <a href={getPageHref("/impressum")} class="hover:underline"
+                >{impressum}</a
+              >
             </li>
             <li class="mb-1">
-              <a href="/datenschutz" class="hover:underline">{privacy}</a>
+              <a href={getPageHref("/datenschutz")} class="hover:underline"
+                >{privacy}</a
+              >
             </li>
           </ul>
         </div>
