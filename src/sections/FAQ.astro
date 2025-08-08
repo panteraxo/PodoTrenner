@@ -1,3 +1,20 @@
+---
+const {
+  title1,
+  desc1,
+  title2,
+  desc2,
+  title3,
+  desc3,
+  title4,
+  desc4,
+  title5,
+  desc5,
+  title6,
+  desc6,
+} = Astro.props;
+---
+
 <section id="faq">
   <!-- component -->
   <div class="m-2 space-y-2 h-[60vh] my-[15rem]">
@@ -7,7 +24,7 @@
       id="toggleBtn0"
     >
       <button class="flex w-full cursor-pointer items-center justify-between">
-        <span> Was bedeutet Podologische Behandlung? </span>
+        <span> {title1} </span>
         <img
           id="chevron0"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
@@ -18,8 +35,7 @@
         id="content0"
         class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
-        Fachgerechte Pflege und Behandlung von Fußproblemen zur Förderung der
-        Fußgesundheit.
+        {desc1}
       </div>
     </div>
     <div
@@ -28,7 +44,7 @@
       id="toggleBtn1"
     >
       <button class="flex w-full cursor-pointer items-center justify-between">
-        <span> Sind die Instrumente sterilisiert? </span>
+        <span> {title2} </span>
         <img
           id="chevron1"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
@@ -39,8 +55,7 @@
         id="content1"
         class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
-        Ja, alle Instrumente werden nach jeder Behandlung gemäß den geltenden
-        Hygienevorschriften sorgfältig gereinigt, desinfiziert und sterilisiert.
+        {desc2}
       </div>
     </div>
 
@@ -50,7 +65,7 @@
       id="toggleBtn2"
     >
       <button class="flex w-full cursor-pointer items-center justify-between">
-        <span> Wie lange dauert eine podologische Sitzung? </span>
+        <span> {title3} </span>
         <img
           id="chevron2"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
@@ -61,7 +76,7 @@
         id="content2"
         class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
-        Eine Behandlung dauert in der Regel etwa 40 Minuten.
+        {desc3}
       </div>
     </div>
 
@@ -71,7 +86,7 @@
       id="toggleBtn3"
     >
       <button class="flex w-full cursor-pointer items-center justify-between">
-        <span> Was muss ich zum ersten Termin mitbringen? </span>
+        <span> {title4} </span>
         <img
           id="chevron3"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
@@ -82,8 +97,7 @@
         id="content3"
         class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
-        Sie müssen nichts mitbringen – kommen Sie einfach pünktlich zu Ihrem
-        Termin.
+        {desc4}
       </div>
     </div>
 
@@ -93,7 +107,7 @@
       id="toggleBtn4"
     >
       <button class="flex w-full cursor-pointer items-center justify-between">
-        <span> Behandeln Sie auch Menschen mit Diabetes? </span>
+        <span> {title5} </span>
         <img
           id="chevron4"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
@@ -104,8 +118,7 @@
         id="content4"
         class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
-        Ja, wir sind auf die Behandlung von Risikopatienten wie Diabetiker*innen
-        spezialisiert und arbeiten besonders sorgfältig und schonend.
+        {desc5}
       </div>
     </div>
 
@@ -115,7 +128,7 @@
       id="toggleBtn5"
     >
       <button class="flex w-full cursor-pointer items-center justify-between">
-        <span> Welche Fußprobleme werden behandelt? </span>
+        <span> {title6} </span>
         <img
           id="chevron5"
           src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
@@ -126,11 +139,7 @@
         id="content5"
         class="max-h-0 overflow-hidden opacity-0 transition-all duration-500"
       >
-        Wir behandeln eine Vielzahl von Beschwerden, unter anderem:
-        Eingewachsene Nägel Hühneraugen (Clavus), Schwielen (Hyperkeratosen),
-        Pilzinfektionen der Haut oder Nägel (Mykosen), Nagelverformungen
-        (Onychodystrophie), Hornhaut und Risse (Rhagaden), Diabetisches
-        Fußsyndrom Druckstellen und Schmerzen beim Gehen
+        {desc6}
       </div>
     </div>
   </div>

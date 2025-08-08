@@ -1,5 +1,20 @@
 ---
-
+const {
+  address,
+  phone,
+  email,
+  addressOpen,
+  range,
+  range2,
+  home,
+  services,
+  about,
+  contact,
+  faq,
+  privacy,
+  impressum,
+  allRights,
+} = Astro.props;
 ---
 
 <footer class="bg-white font-jost">
@@ -20,18 +35,27 @@
           <ul class="text-gray-800 font-medium te">
             <li>
               <p>
-                Hansastr. 8 B 14612 <br /> Falkensee
-                <br />
-                <a href="tel:0332242298808" class="hover:underline"
-                  >03322 42 29 808</a
-                >
+                {
+                  address.map((paragraph: string) => (
+                    <p class="leading-relaxed">{paragraph}</p>
+                  ))
+                }
+
+                <a href="tel:0332242298808" class="hover:underline">{phone}</a>
                 <br />
                 <a href="mailto:info@podo-trenner.de" class="hover:underline"
-                  >info@podo-trenner.de</a
+                  >{email}</a
                 >
-                <br /> Öffnungszeiten <br /> Montag bis Donnerstag
                 <br />
-                09:00 Uhr - 12:00 Uhr <br /> und <br /> 14:00 Uhr - 18:00 Uhr
+                {addressOpen}
+                <br />
+                {range}
+                <br />
+                {
+                  range2.map((paragraph: string) => (
+                    <p class="leading-relaxed">{paragraph}</p>
+                  ))
+                }
               </p>
             </li>
           </ul>
@@ -39,30 +63,29 @@
         <div class="border-l border-5 pl-4">
           <ul class="text-gray-800 font-medium">
             <li class="mb-1">
-              <a href="/" class="hover:underline">Startseite</a>
+              <a href="/" class="hover:underline">{home}</a>
             </li>
             <li class="mb-1">
-              <a href="#tratements" class="hover:underline">Unsere Leistungen</a
-              >
+              <a href="#tratements" class="hover:underline">{services}</a>
             </li>
             <li class="mb-1">
-              <a href="#aboutme" class="hover:underline">Über uns</a>
+              <a href="#aboutme" class="hover:underline">{about}</a>
             </li>
             <li class="mb-1">
-              <a href="#contact" class="hover:underline">Kontakt</a>
+              <a href="#contact" class="hover:underline">{contact}</a>
             </li>
             <li class="mb-1">
-              <a href="#faq" class="hover:underline">FAQ</a>
+              <a href="#faq" class="hover:underline">{faq}</a>
             </li>
           </ul>
         </div>
         <div class="md:border-l border-5 pl-4">
           <ul class="text-gray-800 font-medium flex gap-6 md:gap-0 md:flex-col">
             <li class="mb-1">
-              <a href="/impressum" class="hover:underline">Impressum</a>
+              <a href="/impressum" class="hover:underline">{impressum}</a>
             </li>
             <li class="mb-1">
-              <a href="/datenschutz" class="hover:underline">Datenschutz</a>
+              <a href="/datenschutz" class="hover:underline">{privacy}</a>
             </li>
           </ul>
         </div>
@@ -70,9 +93,7 @@
     </div>
     <hr class="my-6 border-gray-800 sm:mx-auto lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm text-gray-800 sm:text-center"
-        >© 2025 Esther Trenner Podologie. Alle Rechte vorbehalten.
-      </span>
+      <span class="text-sm text-gray-800 sm:text-center">{allRights} </span>
     </div>
   </div>
 </footer>

@@ -1,0 +1,181 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Presentation from "../../sections/Presentation.astro";
+import Address from "../../sections/Address.astro";
+import AboutMe from "../../sections/AboutMe.astro";
+import Contact from "../../sections/Contact.astro";
+import Specifics from "../../sections/Specifics.astro";
+import Welcome from "../../sections/Welcome.astro";
+import Cut from "../../sections/Cut.astro";
+import Cut2 from "../../sections/Cut2.astro";
+import type { Language } from "../../types/language.type";
+import Cut3 from "../../sections/Cut3.astro";
+import Cut4 from "../../sections/Cut4.astro";
+import Form from "../../sections/Form.astro";
+import FAQ from "../../sections/FAQ.astro";
+import de from "../../i18n/de";
+import es from "../../i18n/es";
+import en from "../../i18n/en";
+import it from "../../i18n/it";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } },
+    { params: { lang: "es" } },
+    { params: { lang: "it" } },
+  ];
+}
+
+export const defaultRedirect = "/de";
+
+const lang = Astro.params.lang as Language;
+const translations = { de, en, es, it };
+const t = translations[lang];
+---
+
+<Layout lang={lang} t={t} title="Start - Esther Trenner Podologie">
+  <Presentation
+    title={t.presentation.title}
+    button={t.presentation.button}
+    ad={t.presentation.ad}
+  />
+  <Welcome />
+  <Specifics
+    title={t.services.title}
+    description={t.services.description}
+    card1={t.services.card1}
+    card2={t.services.card2}
+    card3={t.services.card3}
+    card4={t.services.card4}
+    card5={t.services.card5}
+    card6={t.services.card6}
+  />
+  <Cut />
+  <Address
+    title={t.address.title}
+    desc={t.address.desc}
+    termin={t.address.termin}
+    address={t.address.address}
+  />
+  <Cut2 />
+  <AboutMe
+    title={t.aboutUs.title}
+    subtitle={t.aboutUs.subtitle}
+    title2={t.aboutUs.title2}
+    description={t.aboutUs.description}
+    content={t.aboutUs.content}
+    desc={t.aboutUs.desc}
+    content2={t.aboutUs.content2}
+    desc2={t.aboutUs.desc2}
+    content3={t.aboutUs.content3}
+    desc3={t.aboutUs.desc3}
+  />
+
+  <Cut3 />
+  <Form
+    title={t.contact.title}
+    subtitle={t.contact.subtitle}
+    name={t.contact.name}
+    email={t.contact.email}
+    phone={t.contact.phone}
+    message={t.contact.message}
+    send={t.contact.send}
+    success={t.contact.success}
+  />
+  <Contact
+    addressTitle={t.contact.addressTitle}
+    addressDesc={t.contact.addressDesc}
+    reference={t.contact.reference}
+    phoneTitle={t.contact.phoneTitle}
+    phoneDesc={t.contact.phoneDesc}
+    emailTitle={t.contact.emailTitle}
+    emailDesc={t.contact.emailDesc}
+  />
+  <Cut4 />
+  <FAQ
+    title1={t.faq.title1}
+    desc1={t.faq.desc1}
+    title2={t.faq.title2}
+    desc2={t.faq.desc2}
+    title3={t.faq.title3}
+    desc3={t.faq.desc3}
+    title4={t.faq.title4}
+    desc4={t.faq.desc4}
+    title5={t.faq.title5}
+    desc5={t.faq.desc5}
+    title6={t.faq.title6}
+    desc6={t.faq.desc6}
+  />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target;
+
+              // Verificar el tamaño de pantalla (md = 768px)
+              const isSmallScreen = window.innerWidth < 768;
+
+              // Para p5-p10, no aplicar animaciones en pantallas pequeñas
+              const isP5ToP10 = ["p5", "p6", "p7", "p8", "p9", "p10"].includes(
+                target.id
+              );
+
+              if (isP5ToP10 && isSmallScreen) {
+                // No aplicar animación en pantallas pequeñas para p5-p10
+                observer.unobserve(target);
+                return;
+              }
+
+              if (
+                target.id === "p1" ||
+                target.id === "p3" ||
+                target.id === "p5" ||
+                target.id === "p8" ||
+                target.id === "p9"
+              ) {
+                target.classList.add("animate-left");
+              } else if (
+                target.id === "p2" ||
+                target.id === "p4" ||
+                target.id === "p6" ||
+                target.id === "p7" ||
+                target.id === "p10"
+              ) {
+                target.classList.add("animate-right");
+              }
+              observer.unobserve(target); // para que solo se animen una vez
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      const p1 = document.getElementById("p1");
+      const p2 = document.getElementById("p2");
+      const p3 = document.getElementById("p3");
+      const p4 = document.getElementById("p4");
+      const p5 = document.getElementById("p5");
+      const p6 = document.getElementById("p6");
+      const p7 = document.getElementById("p7");
+      const p8 = document.getElementById("p8");
+      const p9 = document.getElementById("p9");
+      const p10 = document.getElementById("p10");
+
+      if (p1) observer.observe(p1);
+      if (p2) observer.observe(p2);
+      if (p3) observer.observe(p3);
+      if (p4) observer.observe(p4);
+      if (p5) observer.observe(p5);
+      if (p6) observer.observe(p6);
+      if (p7) observer.observe(p7);
+      if (p8) observer.observe(p8);
+      if (p9) observer.observe(p9);
+      if (p10) observer.observe(p10);
+    });
+  </script>
+</Layout>

@@ -1,5 +1,5 @@
 ---
-
+const { title, desc, termin, address } = Astro.props;
 ---
 
 <section class="relative bg-1 p-6 md:p-24 overflow-hidden font-jost">
@@ -14,22 +14,18 @@
     class="lg:absolute top-1/2 right-1/6 transform lg:-translate-y-1/2 lg:translate-x-1/4 bg-2 opacity-90 p-6 lg:p-10 lg:w-2/5 shadow-xl z-10"
   >
     <h2 class="text-4xl 2xl:text-8xl font-bold text-white mb-4 font-dm">
-      Unsere Praxis
+      {title}
     </h2>
 
     <h3 class="text-lg md:text-2xl font-bold text-[#f6f6f6] mb-1">
-      Öffnungszeiten
+      {desc}
     </h3>
     <p class="text-[#f6f6f6] mb-4 md:text-2xl">
-      Montag – Donnerstag: 08:00 – 18:00 Uhr, Freitag: 08:00 – 14:00 Uhr
+      {termin}
     </p>
 
     <p class="text-[#f6f6f6] md:text-2xl">
-      Unsere moderne, zweckmäßig errichtete Praxis in der Hansastraße 8B,
-      14612 Falkensee, ist bestens ausgestattet. Sie werden von einem
-      freundlichen Team empfangen. Parkplätze stehen direkt am Haus zur
-      Verfügung und die nächste Bushaltestelle ist nur wenige Gehminuten
-      entfernt.
+      {address}
     </p>
   </div>
 </section>

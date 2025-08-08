@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
-const links = [
-  { href: "#home", label: "Startseite" },
-  { href: "#tratements", label: "Unsere Leistungen" },
-  { href: "#aboutme", label: "Über uns" },
-  { href: "#contact", label: "Kontakt" },
-  { href: "#faq", label: "FAQ" },
-];
-
-const Navbar = () => {
+const Navbar = ({
+  home,
+  services,
+  about,
+  contact,
+  faq,
+  languages,
+  currentLang,
+  languageLabel,
+}) => {
+  const links = [
+    { href: "#home", label: home },
+    { href: "#tratements", label: services },
+    { href: "#aboutme", label: about },
+    { href: "#contact", label: contact },
+    { href: "#faq", label: faq },
+  ];
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [currentPath, setCurrentPath] = useState("/");
@@ -17,11 +25,28 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  // Función para manejar el cambio de idioma
+  const handleLanguageChange = (event) => {
+    const selectedLang = event.target.value;
+
+    // Tomamos hash actual si existe (#aboutme, etc.)
+    const currentHash = window.location.hash;
+
+    // Cambiamos solo el prefijo de idioma en el pathname
+    const newPath = window.location.pathname.replace(
+      /^\/(de|en|es|it)/,
+      `/${selectedLang}`
+    );
+
+    // Redirigimos manteniendo hash
+    window.location.href = newPath + currentHash;
+  };
+
   // Función para generar href dinámico
   const getHref = (originalHref) => {
-    // Si no estamos en la página principal, agregar la ruta raíz
-    if (currentPath !== "/" && originalHref.startsWith("#")) {
-      return `/${originalHref}`;
+    // Si el href es un ancla (#aboutme, etc.), lo unimos con el idioma actual
+    if (originalHref.startsWith("#")) {
+      return `/${currentLang}${originalHref}`;
     }
     return originalHref;
   };
@@ -106,15 +131,37 @@ const Navbar = () => {
           </a>
 
           {/* Desktop nav */}
-          <ul className="hidden sm:flex space-x-6 text-sm font-medium font-jost">
-            {links.map((link, i) => (
-              <li key={i}>
-                <a href={getHref(link.href)} className={getLinkClasses()}>
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden sm:flex items-center space-x-6">
+            <ul className="flex space-x-6 text-sm font-medium font-jost">
+              {links.map((link, i) => (
+                <li key={i}>
+                  <a href={getHref(link.href)} className={getLinkClasses()}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            {/* Language selector */}
+            {languages && (
+              <select
+                id="lang-select"
+                value={currentLang}
+                onChange={handleLanguageChange}
+                className={`text-sm font-medium font-jost border rounded px-2 py-1 ${
+                  getNavbarClasses().includes("bg-1")
+                    ? "bg-1 text-white border-white"
+                    : "bg-white text-gray-700 border-gray-300"
+                }`}
+              >
+                {languages.map((lang) => (
+                  <option key={lang.code} value={lang.code}>
+                    {lang.label}
+                  </option>
+                ))}
+              </select>
+            )}
+          </div>
 
           {/* Mobile toggle */}
           <div className="sm:hidden cursor-pointer" onClick={toggleMenu}>
@@ -148,6 +195,27 @@ const Navbar = () => {
             {link.label}
           </a>
         ))}
+
+        {/* Language selector for mobile */}
+        {languages && (
+          <div className="mt-8 w-full">
+            <label className="block text-1 text-xl font-bold mb-2">
+              {languageLabel}
+            </label>
+            <select
+              id="lang-select-mobile"
+              value={currentLang}
+              onChange={handleLanguageChange}
+              className="w-full text-lg font-medium border-2 border-1 rounded px-4 py-2 bg-white text-1"
+            >
+              {languages.map((lang) => (
+                <option key={lang.code} value={lang.code}>
+                  {lang.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
       </div>
     </>
   );

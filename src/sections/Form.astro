@@ -1,3 +1,9 @@
+---
+const { title, subtitle, name, email, phone, message, send, success } =
+  Astro.props;
+const successs = success;
+---
+
 <section
   class="relative bg-1 flex flex-col lg:flex-row min-h-[90vh] items-stretch px-4"
   id="contact"
@@ -17,16 +23,15 @@
       <!-- Capa oscura opcional para contraste -->
       <div class="absolute inset-0 bg-black/40"></div>
       <div
-        class="relative z-10 flex flex-col justify-center items-center h-full px-6 lg:text-left"
+        class="relative z-10 flex flex-col justify-center items-center h-full px-6 pt-[10rem] lg:text-left"
       >
         <h2
           class="text-5xl lg:text-6xl font-bold text-white md:mt-0 mb-4 font-dm drop-shadow-lg"
         >
-          Kontakt
+          {title}
         </h2>
         <p class="text-xl text-[#f6f6f6] font-jost drop-shadow text-center">
-          Wir sind für Sie da. Schreiben Sie uns – wir melden uns
-          schnellstmöglich!
+          {subtitle}
         </p>
       </div>
     </div>
@@ -42,7 +47,7 @@
             <input
               name="name"
               type="text"
-              placeholder="Ihr Name"
+              placeholder={name}
               class="w-full
                           rounded
                           py-3
@@ -59,7 +64,7 @@
             <input
               name="email"
               type="email"
-              placeholder="Ihre E-Mail-Adresse"
+              placeholder={email}
               class="w-full
                           rounded
                           py-3
@@ -76,7 +81,7 @@
             <input
               name="phone"
               type="text"
-              placeholder="Ihre Telefonnummer"
+              placeholder={phone}
               class="w-full
                           rounded
                           py-3
@@ -93,7 +98,7 @@
             <textarea
               name="message"
               rows="6"
-              placeholder="Ihre Nachricht"
+              placeholder={message}
               class="w-full
                           rounded
                           py-3
@@ -119,17 +124,18 @@
                           cursor-pointer
                           hover:bg-opacity-90"
             >
-              Send
+              {send}
             </button>
           </div>
         </form>
-        <script type="module">
-          document
-            .getElementById("contactForm")
-            .addEventListener("submit", async (e) => {
-              e.preventDefault();
+        <script type="module" define:vars={{ successs }}>
+          document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
 
-              const form = e.target;
+            form.addEventListener("submit", async (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
               const data = {
                 name: form.name.value,
                 email: form.email.value,
@@ -151,7 +157,7 @@
 
                 if (response.ok) {
                   const successMessage = document.createElement("div");
-                  successMessage.textContent = "Mensaje enviado correctamente.";
+                  successMessage.textContent = successs;
                   successMessage.className = "text-green-500 text-center mt-4";
                   form.parentElement.appendChild(successMessage);
 
@@ -168,6 +174,7 @@
                 console.error(error);
               }
             });
+          });
         </script>
       </div>
     </div>

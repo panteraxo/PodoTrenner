@@ -1,5 +1,17 @@
 ---
 import "../styles/global.css";
+const {
+  title,
+  subtitle,
+  title2,
+  description,
+  content,
+  desc,
+  content2,
+  desc2,
+  content3,
+  desc3,
+} = Astro.props;
 ---
 
 <section
@@ -19,20 +31,31 @@ import "../styles/global.css";
       <h1
         class="text-4xl md:text-4xl font-bold mb-4 font-dm text-center lg:text-left"
       >
-        Über uns
+        {title}
       </h1>
       <p class="text-lg md:text-xl text-center lg:text-left">
-        Wir sind ein auf Podologie spezialisiertes Zentrum, das sich der
-        Gesundheit und dem Wohlbefinden Ihrer Füße widmet. Unser Ziel ist es,
-        sichere, wirksame und auf jede Person zugeschnittene Behandlungen
-        anzubieten - mit Professionalität, moderner Technik und einem
-        persönlichen Service.
+        {subtitle}
       </p>
     </div>
   </div>
 </section>
 <section class="mb-[16rem]">
   <div class="w-full max-w-6xl mx-auto px-4 py-10 space-y-10 mt-16">
+    <div class="flex flex-row">
+      <div class="w-1/2">
+        <img src="/images/a5.webp" class="rounded-lg" alt="" />
+      </div>
+      <div class="w-1/2 p-6 text-center">
+        <h2 class="text-2xl md:text-4xl font-bold mb-4 font-dm">{title2}</h2>
+        <div class="text-gray-700 text-base md:text-xl space-y-4">
+          {
+            description.map((paragraph: string) => (
+              <p class="leading-relaxed">{paragraph}</p>
+            ))
+          }
+        </div>
+      </div>
+    </div>
     <!-- Fila 1 -->
     <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 mt-[16rem]">
       <!-- Imagen -->
@@ -47,12 +70,10 @@ import "../styles/global.css";
       <!-- Texto -->
       <div id="p6">
         <h2 class="text-2xl md:text-4xl text-7 font-bold mb-2 font-dm">
-          Wir begleiten dich mit Einfühlungsvermögen bei jedem Schritt.
+          {content}
         </h2>
         <p class="text-gray-600 text-base md:text-2xl">
-          Unser Service zeichnet sich durch Nähe und Vertrauen aus. Vom ersten
-          Kontakt bis zur letzten Behandlung sorgen wir dafür, dass du dich
-          wohl, verstanden und gut aufgehoben fühlst.
+          {desc}
         </p>
       </div>
     </div>
@@ -64,13 +85,10 @@ import "../styles/global.css";
       <!-- Texto -->
       <div id="p8" class="order-2 md:order-1">
         <h2 class="text-2xl md:text-3xl text-7 font-bold mb-2 font-dm">
-          Strenge Protokolle für deine Sicherheit.
+          {content2}
         </h2>
         <p class="text-gray-600 text-base md:text-2xl">
-          Wir befolgen strenge Desinfektions- und Sterilisationsverfahren bei
-          jeder Behandlung. Unsere Instrumente werden sorgfältig aufbereitet, um
-          eine hygienische und risikofreie Erfahrung für deine Füße zu
-          gewährleisten.
+          {desc2}
         </p>
       </div>
       <!-- Imagen -->
@@ -96,12 +114,10 @@ import "../styles/global.css";
       <!-- Texto -->
       <div id="p10">
         <h2 class="text-2xl md:text-3xl text-7 font-bold mb-2 font-dm">
-          Erfahrung und Fachwissen für deine Fußgesundheit.
+          {content3}
         </h2>
         <p class="text-gray-600 text-base md:text-2xl">
-          Unsere Podologen sind bestens ausgebildet und bereit, sowohl einfache
-          Pflege als auch komplexere Probleme zu behandeln. Wir kümmern uns mit
-          Präzision, Hingabe und Professionalität um deine Füße.
+          {desc3}
         </p>
       </div>
     </div>

@@ -1,4 +1,13 @@
 ---
+const { lang, t } = Astro.props;
+
+const languages = [
+  { code: "de", label: t.languageOptions.de },
+  { code: "en", label: t.languageOptions.en },
+  { code: "es", label: t.languageOptions.es },
+  { code: "it", label: t.languageOptions.it },
+];
+
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
@@ -10,7 +19,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -19,8 +28,33 @@ const { title } = Astro.props;
     <link rel="icon" href="/images/logopodo.webp" type="image/webp" />
   </head>
   <body>
-    <Navbar client:load />
+    <Navbar
+      client:load
+      home={t.nav.home}
+      services={t.nav.services}
+      about={t.nav.about}
+      contact={t.nav.contact}
+      faq={t.nav.faq}
+      languages={languages}
+      currentLang={lang}
+      languageLabel={t.languageLabel}
+    />
     <slot />
-    <Footer />
+    <Footer
+      address={t.footer.address}
+      phone={t.footer.phone}
+      email={t.footer.email}
+      addressOpen={t.footer.addressOpen}
+      range={t.footer.range}
+      range2={t.footer.range2}
+      home={t.footer.home}
+      services={t.footer.services}
+      about={t.footer.about}
+      contact={t.footer.contact}
+      faq={t.footer.faq}
+      privacy={t.footer.privacy}
+      impressum={t.footer.impressum}
+      allRights={t.footer.allRights}
+    />
   </body>
 </html>

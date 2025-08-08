@@ -1,58 +1,37 @@
 ---
+const { title, description, card1, card2, card3, card4, card5, card6 } =
+  Astro.props;
 const modalDetails = [
   {
     id: 1,
-    title: "Diabetikerfußpflege",
-    description:
-      "Spezielle Pflege zur Vermeidung von Verletzungen und Infektionen bei Diabetes.",
+    title: card1.modal.title,
+    description: card1.modal.description,
   },
   {
     id: 2,
-    title: "Eingewachsene Nagel - Entfernung",
-    description:
-      "Sichere Entfernung eingewachsener Nägel zur sofortigen Schmerzlinderung und Heilung.",
+    title: card2.modal.title,
+    description: card2.modal.description,
   },
   {
     id: 3,
-    title: "Rissige Fersen",
-    description:
-      "Intensive Pflege zur Heilung von trockener, rissiger Fersenhaut.",
+    title: card3.modal.title,
+    description: card3.modal.description,
   },
   {
     id: 4,
-    title: "Nagelverdickung",
-    description:
-      "Behandlung verdickter oder pilzbefallener Nägel mit speziellen Fräsen.",
+    title: card4.modal.title,
+    description: card4.modal.description,
   },
+
   {
     id: 5,
-    title: "Hornhautentfernung",
-    description:
-      "Entfernen von verhärteter Haut zur Vorbeugung von Rissen und Schmerzen.",
+    title: card5.modal.title,
+    description: card5.modal.description,
   },
   {
     id: 6,
-    title: "Hallux valgus – Konservative Behandlung",
-    description:
-      "Nicht-chirurgische Maßnahmen zur Schmerzlinderung und Stabilisierung bei Hallux-Beschwerden.",
-  },
-  {
-    id: 7,
-    title: "Warzenbehandlung am Fuß",
-    description:
-      "Effektive Entfernung von Fußwarzen mit podologischen Methoden – hygienisch und schmerzarm.",
-  },
-  {
-    id: 8,
-    title: "Nagelkorrektur mit Spange",
-    description:
-      "Sanfte Korrektur eingewachsener oder verformter Nägel durch individuell angepasste Nagelspangen.",
-  },
-  {
-    id: 9,
-    title: "Fuß-Notfallbehandlung",
-    description:
-      "Akute Hilfe bei Schmerzen, Entzündungen oder Verletzungen – auch ohne Termin möglich.",
+    title: card6.modal.title,
+    description: card6.modal.description,
   },
 ];
 ---
@@ -63,14 +42,13 @@ const modalDetails = [
 >
   <div class="flex flex-wrap">
     <h2 class="text-5xl text-7 md:text-6xl font-bold py-10 font-dm text-center">
-      Unsere Leistungen
+      {title}
     </h2>
   </div>
   <p
     class="md:text-lg text-gray-600 px-6 lg:px-0 pb-20 font-semibold font-jost text-center"
   >
-    Wir untersuchen, behandeln und beugen Fuß- und Beinerkrankungen bei
-    Erwachsenen und Kindern vor. Einige unserer Behandlungen sind:
+    {description}
   </p>
   <div class="flex flex-wrap">
     <div class="column" data-index="0">
@@ -158,10 +136,9 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
             </g>
           </svg>
         </div>
-        <h3 class="pir font-dm">Diabetikerfußpflege</h3>
+        <h3 class="pir font-dm">{card1.title}</h3>
         <p class="par text-gray-600 font-jost">
-          Spezielle Pflege zur Vermeidung von Verletzungen und Infektionen bei
-          Diabetes.
+          {card1.description}
         </p>
       </div>
     </div>
@@ -205,10 +182,9 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
             </g>
           </svg>
         </div>
-        <h3 class="pir font-dm">Nagelkorrektur mit Spange</h3>
+        <h3 class="pir font-dm">{card2.title}</h3>
         <p class="par text-gray-600 font-jost">
-          Sanfte Korrektur eingewachsener oder verformter Nägel durch
-          individuell angepasste Nagelspangen.
+          {card2.description}
         </p>
       </div>
     </div>
@@ -276,9 +252,9 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
             </g>
           </svg>
         </div>
-        <h3 class="pir font-dm">Rissige Fersen</h3>
+        <h3 class="pir font-dm">{card3.title}</h3>
         <p class="par text-gray-600 font-jost">
-          Intensive Pflege zur Heilung von trockener, rissiger Fersenhaut.
+          {card3.description}
         </p>
       </div>
     </div>
@@ -332,9 +308,9 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
             </g>
           </svg>
         </div>
-        <h3 class="pir font-dm">Nagelverdickung</h3>
+        <h3 class="pir font-dm">{card4.title}</h3>
         <p class="par text-gray-600 font-jost">
-          Behandlung verdickter oder pilzbefallener Nägel mit speziellen Fräsen.
+          {card4.description}
         </p>
       </div>
     </div>
@@ -391,10 +367,9 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
             </g>
           </svg>
         </div>
-        <h3 class="pir font-dm">Hühneraugenbehandlung</h3>
+        <h3 class="pir font-dm">{card5.title}</h3>
         <p class="par text-gray-600 font-jost">
-          Spezialisierte Behandlung zur Entfernung von Hühneraugen, lindert
-          Schmerzen und verbessert den Gehkomfort.
+          {card5.description}
         </p>
       </div>
     </div>
@@ -450,10 +425,9 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
             </g>
           </svg>
         </div>
-        <h3 class="pir font-dm">Hallux valgus – Konservative Behandlung</h3>
+        <h3 class="pir font-dm">{card6.title}</h3>
         <p class="par text-gray-600 font-jost">
-          Nicht-chirurgische Maßnahmen zur Schmerzlinderung und Stabilisierung
-          bei Hallux-Beschwerden.
+          {card6.description}
         </p>
       </div>
     </div>
@@ -522,62 +496,7 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
     </div>
   </div>
 </section>
-<script>
-  const modalDetails = [
-    {
-      id: 1,
-      title: "Diabetikerfußpflege",
-      description: [
-        "Die Diabetikerfußpflege ist eine spezialisierte Form der medizinischen Fußpflege, die sich gezielt an Menschen mit Diabetes mellitus richtet. Aufgrund der krankheitsbedingten Durchblutungsstörungen und Nervenschädigungen (Neuropathien) besteht bei Diabetikern ein erhöhtes Risiko für Fußverletzungen, Infektionen und das sogenannte diabetische Fußsyndrom.",
-        "Im Rahmen der Diabetikerfußpflege werden die Füße sorgfältig untersucht und gepflegt. Dazu gehören das fachgerechte Schneiden der Nägel, das Entfernen von Hornhaut, Schwielen oder Druckstellen, sowie die Behandlung kleinerer Läsionen - alles unter hygienischen Bedingungen und mit größter Vorsicht. Ziel ist es, Verletzungen zu vermeiden, Infektionen vorzubeugen und die Mobilität sowie Lebensqualität der Patienten langfristig zu erhalten.",
-        "Regelmäßige Kontrollen und eine aufklärende Beratung zur richtigen Fußpflege zu Hause sind ebenfalls Teil der Leistung.",
-      ],
-    },
-    {
-      id: 2,
-      title: "Eingewachsene Nagel und Nagelkorrektur",
-      description: [
-        "Ein eingewachsener Nagel entsteht, wenn der Nagelrand in die Haut hineinwächst und dadurch Schmerzen, Rötungen und Entzündungen verursacht. Ursachen können falsches Schneiden der Nägel, zu enge Schuhe oder erbliche Faktoren sein.",
-        "Die Nagelkorrektur ist eine Behandlung, die darauf abzielt, das Nagelwachstum mit Methoden wie Nagelspangen, orthonixischen Techniken oder bei schweren Fällen durch medizinische Eingriffe zu regulieren. Ziel ist es, die Schmerzen zu lindern, die Nagelform zu korrigieren und zukünftige Probleme zu verhindern.",
-      ],
-    },
-    {
-      id: 3,
-      title: "Nagelverdickung und Rissige Fersen",
-      description: [
-        "Eine Nagelverdickung tritt auf, wenn der Nagel dicker als normal wird. Ursachen können Pilzinfektionen, wiederholte Verletzungen, Durchblutungsstörungen oder altersbedingte Veränderungen sein.",
-        "Rissige Fersen entstehen, wenn die Haut an den Fersen austrocknet, verhärtet und einreißt, was zu Beschwerden, Schmerzen und bei tiefen Rissen auch zu Infektionen führen kann.",
-        "Beide Zustände erfordern spezielle Pflege, wie regelmäßige Feuchtigkeitszufuhr, kontrolliertes Feilen, ggf. antimykotische Behandlungen sowie in manchen Fällen eine podologische Fachbehandlung.",
-      ],
-    },
-    {
-      id: 4,
-      title: "Hühneraugenbehandlung ",
-      description: [
-        "Die Hornhaut ist eine natürliche Schutzschicht der Haut, die sich besonders an den Füßen durch Reibung, Druck oder ungeeignetes Schuhwerk verstärken kann. Wird sie zu dick, kann sie rissig werden, Schmerzen verursachen oder Druckstellen und Hühneraugen begünstigen.",
-        "Bei der professionellen Hornhautentfernung wird die verhärtete Haut sanft mit speziellen Geräten wie Skalpell, Hobel und Schleiffräsern entfernt – hygienisch, schmerzfrei und hautschonend. Die Haut wird anschließend mit pflegenden Cremes und feuchtigkeitsspendenden Produkten behandelt, um ihre Elastizität und Geschmeidigkeit wiederherzustellen.",
-        "Geeignet für: Menschen mit starker Hornhautbildung, trockenen und rauen Füßen, Sportler, Diabetiker oder alle, die gepflegte und gesunde Füße wünschen.",
-      ],
-    },
-    {
-      id: 5,
-      title: "Hallux valgus – Konservative Behandlung",
-      description: [
-        "Der Hallux valgus – auch bekannt als Ballenzeh – ist eine Fehlstellung der Großzehe, bei der sich der große Zeh in Richtung der anderen Zehen neigt, während sich das Großzehengrundgelenk nach außen wölbt. Diese Deformität kann Schmerzen, Entzündungen und Einschränkungen beim Gehen verursachen.",
-        "Die konservative Behandlung zielt darauf ab, Beschwerden zu lindern, das Fortschreiten der Fehlstellung zu verlangsamen und eine Operation möglichst zu vermeiden. Zu den Maßnahmen zählen die Anpassung von Schuhwerk (z. B. breite, bequeme Schuhe), der Einsatz von Orthesen, Zehenspreizern oder individuell angepassten Einlagen, sowie physiotherapeutische Übungen zur Kräftigung der Fußmuskulatur und Verbesserung der Gelenkbeweglichkeit.",
-        "Geeignet für: Personen im Anfangs- bis mittleren Stadium eines Hallux valgus, bei denen noch keine schweren strukturellen Veränderungen vorliegen oder für die ein chirurgischer Eingriff nicht in Frage kommt.",
-      ],
-    },
-    {
-      id: 6,
-      title: "Fuß-Notfallbehandlung",
-      description: [
-        "Die Fuß-Notfallbehandlung ist eine podologische Sofortmaßnahme zur schnellen Linderung starker oder plötzlich auftretender Schmerzen und Probleme im Fußbereich. Sie richtet sich an Patient:innen, die unter akuten Beschwerden leiden – wie etwa starke Schmerzen durch eingewachsene Nägel, Entzündungen, Druckstellen, Blasen, Risse in der Haut oder plötzlich auftretende Schwellungen.",
-        "Das Ziel dieser Behandlung ist es, schnellstmöglich die Ursache des Schmerzes zu erkennen und gezielt zu behandeln. Dabei können Maßnahmen wie das vorsichtige Entfernen von Fremdkörpern, das Entlasten eingewachsener Nägel, die Desinfektion entzündeter Stellen oder das fachgerechte Versorgen offener Hautareale zum Einsatz kommen.",
-        "Besonders geeignet für: Diabetiker:innen, ältere Menschen oder Personen mit eingeschränkter Mobilität, bei denen akute Fußprobleme rasch behandelt werden müssen, um Komplikationen zu vermeiden.",
-      ],
-    },
-  ];
+<script define:vars={{ modalDetails }}>
   // Elementos del DOM
   const modal = document.getElementById("default-modal");
   const modalTitle = document.getElementById("modal-title");
@@ -596,9 +515,14 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
       modalDescription.innerHTML = "";
 
       // Crear párrafos para cada elemento de la descripción
-      data.description.forEach((paragraph) => {
+      // Manejar tanto arrays como strings con <br><br>
+      const descriptions = Array.isArray(data.description)
+        ? data.description
+        : data.description.split("<br><br>");
+
+      descriptions.forEach((paragraph) => {
         const p = document.createElement("p");
-        p.textContent = paragraph;
+        p.textContent = paragraph.trim();
         p.className = "mb-4 last:mb-0"; // Espaciado entre párrafos
         modalDescription.appendChild(p);
       });

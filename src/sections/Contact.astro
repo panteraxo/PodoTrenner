@@ -1,5 +1,13 @@
 ---
-
+const {
+  addressTitle,
+  addressDesc,
+  reference,
+  phoneTitle,
+  phoneDesc,
+  emailTitle,
+  emailDesc,
+} = Astro.props;
 ---
 
 <section class="bg-1 lg:h-[80vh] font-jost pb-[16rem]">
@@ -11,15 +19,16 @@
       class="space-y-4 py-44 text-white text-lg w-full text-center lg:text-left"
     >
       <div>
-        <p class="font-semibold">Adresse:</p>
-        <p>Hansastr. 8 B<br />14612 Falkensee</p>
+        <p class="font-semibold">{addressTitle}:</p>
+        <p>{addressDesc}</p>
+        <p>{reference}</p>
       </div>
       <div>
-        <p class="font-semibold">Telefon:</p>
+        <p class="font-semibold">{phoneTitle}:</p>
         <a href="tel:0332242298808">+49 3322 4229808</a>
       </div>
       <div>
-        <p class="font-semibold">E-Mail:</p>
+        <p class="font-semibold">{emailTitle}:</p>
         <a href="mailto:info@podo-trenner.de">info@podo-trenner.de</a>
       </div>
     </div>
