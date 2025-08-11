@@ -66,7 +66,7 @@ const getPageHref = (page: string) => {
                 <div class="mt-2">
                   <div>{addressOpen}</div>
                   <div>{range}</div>
-                  <div set:html={range2} />
+                  {range2.map((line: string) => <div>{line}</div>)}
                   <div>{range3}</div>
                   <div>{range4}</div>
                 </div>

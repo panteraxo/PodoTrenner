@@ -126,7 +126,7 @@ export default {
         email: "info@podo-trenner.de",
         addressOpen: "Orari di apertura",
         range: "Dal lunedì al giovedì",
-        range2: ["08:00 – 12:00 "," e "," 14:00 – 18:00"],
+        range2: ["08:00 – 12:00 e 14:00 – 18:00"],
         range3: "Venerdì",
         range4: "08:00 – 14:00",
         home: "Home",

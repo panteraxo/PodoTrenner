@@ -159,7 +159,9 @@ export default {
         email:"info@podo-trenner.de",
         addressOpen:"Öffnungszeiten",
         range:"Montag bis Donnerstag",
-        range2:["08:00 Uhr - 12:00 Uhr "," und "," 14:00 Uhr - 18:00 Uhr",],
+        range2:[
+                "08:00 Uhr - 12:00 Uhr ",
+                " und "," 14:00 Uhr - 18:00 Uhr",],
         range3:"Freitag",
         range4:"08:00 Uhr - 14:00 Uhr",
         home:"Startseite",
