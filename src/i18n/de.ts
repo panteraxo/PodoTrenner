@@ -106,13 +106,13 @@ export default {
         title2:"Über mich",
         description:
                     [
-                    "Mein Name ist Esther Trenner und ich bin staatlich geprüfte Podologin. Ich habe meine Ausbildung an der renommierten Akademie für Podologie in Berlin absolviert und verfüge über umfangreiche Erfahrung in der Behandlung von Fuß- und Beinerkrankungen. Meine Leidenschaft für die Fußgesundheit treibt mich an, stets auf dem neuesten Stand der Technik zu bleiben und meinen Patienten die bestmögliche Versorgung zu bieten.",
+                    "Mein Name ist Esther Trenner und ich bin staatlich geprüfte Podologin.Ich habe meine Ausbildung im September 2020 an der renommierten D&B Schule für Podologie in Berlin absolviert und verfüge über umfangreiche Erfahrung in der Behandlung von Fuß- und Beinerkrankungen. Meine Leidenschaft für die Fußgesundheit treibt mich an, stets auf dem neuesten Stand der Technik zu bleiben und meinen Patienten die bestmögliche Versorgung zu bieten.",
                     "Ich verfüge über offizielle Zertifikate in medizinischer Fußpflege und podologischer Therapie, die von anerkannten Institutionen in Deutschland ausgestellt wurden. Mit meiner Erfahrung und meinem Fachwissen helfe ich Menschen nicht nur, Beschwerden zu lindern, sondern auch ihre Lebensqualität zu verbessern.",
                     "Es ist mir wichtig, jede Behandlung mit Sorgfalt, Empathie und Professionalität durchzuführen. Ich arbeite eng mit Krankenkassen zusammen, damit Sie die bestmögliche Versorgung erhalten – kompetent und vertrauensvoll."
                     ],
         content:"Wir begleiten dich mit Einfühlungsvermögen bei jedem Schritt.",
         desc:"Unser Service zeichnet sich durch Nähe und Vertrauen aus. Vom ersten Kontakt bis zur letzten Behandlung sorgen wir dafür, dass du dich wohl, verstanden und gut aufgehoben fühlst.",
-        content2:"Strenge Protokolle für deine Sicherheit.",
+        content2:"Strenge Hygieneprotokolle für deine Sicherheit.",
         desc2:"Wir befolgen strenge Desinfektions- und Sterilisationsverfahren bei jeder Behandlung. Unsere Instrumente werden sorgfältig aufbereitet, um eine hygienische und risikofreie Erfahrung für deine Füße zu gewährleisten.",
         content3:"Erfahrung und Fachwissen für deine Fußgesundheit.",
         desc3:"Unsere Podologen sind bestens ausgebildet und bereit, sowohl einfache Pflege als auch komplexere Probleme zu behandeln. Wir kümmern uns mit Präzision, Hingabe und Professionalität um deine Füße.",
@@ -159,7 +159,9 @@ export default {
         email:"info@podo-trenner.de",
         addressOpen:"Öffnungszeiten",
         range:"Montag bis Donnerstag",
-        range2:["09:00 Uhr - 12:00 Uhr "," und "," 14:00 Uhr - 18:00 Uhr",],
+        range2:["08:00 Uhr - 12:00 Uhr "," und "," 14:00 Uhr - 18:00 Uhr",],
+        range3:"Freitag",
+        range4:"08:00 Uhr - 14:00 Uhr",
         home:"Startseite",
         services:"Unsere Leistungen",
         about:"Über uns",
