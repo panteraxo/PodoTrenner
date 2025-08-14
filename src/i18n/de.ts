@@ -125,7 +125,7 @@ export default {
         email:"Ihre E-Mail-Adresse",
         phone:"Ihre Telefonnummer",
         message:"Ihre Nachricht",
-        send:"Send",
+        send:"Senden",
         success:"Nachricht erfolgreich gesendet",
 
         addressTitle:"Adresse",
