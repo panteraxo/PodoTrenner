@@ -2,6 +2,7 @@
 const { title, subtitle, name, email, phone, message, send, success } =
   Astro.props;
 const successs = success;
+const sends = send;
 ---
 
 <section
@@ -128,13 +129,18 @@ const successs = success;
             </button>
           </div>
         </form>
-        <script type="module" define:vars={{ successs }}>
+        <script type="module" define:vars={{ successs, sends }}>
           document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("contactForm");
+            const submitBtn = form.querySelector("button[type='submit']");
 
             form.addEventListener("submit", async (e) => {
               e.preventDefault();
               e.stopPropagation();
+
+              // 🔒 Bloquear botón al primer clic
+              submitBtn.disabled = true;
+              submitBtn.textContent = "sendend...";
 
               const data = {
                 name: form.name.value,
@@ -172,6 +178,10 @@ const successs = success;
               } catch (error) {
                 alert("Error de red.");
                 console.error(error);
+              } finally {
+                // 🔓 Habilitamos el botón otra vez
+                submitBtn.disabled = false;
+                submitBtn.textContent = sends; // puedes reemplazar con la variable Astro
               }
             });
           });
