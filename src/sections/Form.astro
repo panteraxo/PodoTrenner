@@ -150,16 +150,13 @@ const sends = send;
               };
 
               try {
-                const response = await fetch(
-                  "http://api.podo-trenner.de/send-mail.php",
-                  {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
-                  }
-                );
+                const response = await fetch("/api/send-mail.php", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(data),
+                });
 
                 if (response.ok) {
                   const successMessage = document.createElement("div");
