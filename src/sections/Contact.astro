@@ -4,9 +4,9 @@ const {
   addressDesc,
   reference,
   phoneTitle,
-  phoneDesc,
   emailTitle,
-  emailDesc,
+  addressDesc2,
+  reference2,
 } = Astro.props;
 ---
 
@@ -20,8 +20,12 @@ const {
     >
       <div>
         <p class="font-semibold">{addressTitle}:</p>
+        <br />
         <p>{addressDesc}</p>
         <p>{reference}</p>
+        <br />
+        <p>{addressDesc2}</p>
+        <p>{reference2}</p>
       </div>
       <div>
         <p class="font-semibold">{phoneTitle}:</p>
@@ -34,13 +38,25 @@ const {
     </div>
 
     <!-- Mapa -->
-    <div class="w-full h-72">
-      <iframe
-        class="w-full h-full rounded-lg border"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.4409710977116!2d13.084987612301349!3d52.56163623302954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8f9d04d5b05b1%3A0x799bb3028daccffc!2sPodologie%20Esther%20Trenner!5e0!3m2!1ses!2spe!4v1745927308778!5m2!1ses!2spe"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="w-full h-72 flex flex-row gap-4 justify-center text-white">
+      <div>
+        <p>Hansastraße 8B</p>
+        <iframe
+          class="w-full h-full rounded-lg border"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.4409710977116!2d13.084987612301349!3d52.56163623302954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8f9d04d5b05b1%3A0x799bb3028daccffc!2sPodologie%20Esther%20Trenner!5e0!3m2!1ses!2spe!4v1745927308778!5m2!1ses!2spe"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div>
+        <p>Adlerstraße 46-48</p>
+        <iframe
+          class="w-full h-full rounded-lg border"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.9216916059813!2d13.080817480061585!3d52.56114989354074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8f9420fc35bff%3A0x5e772442a049eb67!2sAdlerstra%C3%9Fe%2046%2C%2014612%20Falkensee%2C%20Alemania!5e0!3m2!1ses!2spe!4v1763291220605!5m2!1ses!2spe"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </div>
 </section>

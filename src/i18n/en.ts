@@ -74,7 +74,7 @@ export default {
         title: "Our Practice",
         desc: "Opening Hours",
         termin: "Monday – Thursday: 08:00 – 18:00, Friday: 08:00 – 14:00",
-        address: "Our modern, purpose-built practice at Hansastraße 8B, 14612 Falkensee, is well equipped. You will be welcomed by a friendly team. Parking is available directly on-site, and the nearest bus stop is only a few minutes' walk away."
+        address: "Our modern and well-equipped clinics, located at Hansastraße 8B, 14612 Falkensee, and Adlerstraße 46–48, 14612 Falkensee, offer excellent facilities and a pleasant atmosphere. You will be welcomed by a friendly team. Parking is available directly at each location, and the nearest bus stops are only a few minutes’ walk away."
     },
     aboutUs: {
         title: "About Us",
@@ -100,8 +100,10 @@ export default {
         send: "Send",
         success: "Message sent successfully",
         addressTitle: "Address",
-        addressDesc: "Hansastraße 8B<br/> 14612 Falkensee",
+        addressDesc: "Hansastraße 8B 14612 Falkensee",
+        addressDesc2: "Adlerstraße 46-48 14612 Falkensee",
         reference: "(Near the Bahnhofstraße bus stop)",
+        reference2: "(Across from Pegasus Apotheke)",
         phoneTitle: "Phone",
         phoneDesc: "+49 3322 4229808",
         emailTitle: "Email",

@@ -1,5 +1,15 @@
 ---
-const { lang, t } = Astro.props;
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  lang: string;
+  t: any;
+}
+
+const { title, lang, t } = Astro.props;
 
 const languages = [
   { code: "de", label: t.languageOptions.de },
@@ -7,15 +17,6 @@ const languages = [
   { code: "es", label: t.languageOptions.es },
   { code: "it", label: t.languageOptions.it },
 ];
-
-import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.astro";
-import "../styles/global.css";
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>

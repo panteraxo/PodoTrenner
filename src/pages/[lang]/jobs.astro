@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import type { Language } from "../../types/language.type";
+import de from "../../i18n/de";
+import es from "../../i18n/es";
+import en from "../../i18n/en";
+import it from "../../i18n/it";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } },
+    { params: { lang: "es" } },
+    { params: { lang: "it" } },
+  ];
+}
+
+const lang = Astro.params.lang as Language;
+const translations = { de, en, es, it };
+const t = translations[lang];
+const jobs = [
+  {
+    id: "j3",
+    title: "Podólogo/a",
+    location: "Falkensee",
+    badge: "Tiempo completo",
+  },
+  {
+    id: "j4",
+    title: "Podólogo/a",
+    location: "Falkensee",
+    badge: "Tiempo completo",
+  },
+];
+---
+
+<Layout lang={lang} t={t} title="Jobs - Esther Trenner Podologie">
+  <section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="grid gap-8 grid-cols-1 lg:grid-cols-3">
+    <!-- Left: jobs list (2/3 width on large screens) -->
+    <div class="lg:col-span-2 space-y-6">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h1 class="text-2xl font-semibold mb-2">{t?.jobs?.title ?? 'Ofertas de empleo'}</h1>
+        <p class="text-gray-600">{t?.jobs?.intro ?? 'Únete a nuestro equipo...'}</p>
+      </div>
+
+      <!-- Job items -->
+      <div class="space-y-4">
+        {jobs.map(job => (
+          <article class="flex items-center justify-between bg-white rounded-lg shadow-sm p-4 md:p-6">
+            <div class="flex items-center gap-4">
+              <!-- Icon box -->
+              <div class="w-12 h-12 rounded-md bg-teal-50 text-teal-700 flex items-center justify-center">
+                <!-- icon svg -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold">{job.title}</h3>
+                <p class="text-sm text-gray-500">{job.location}</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <span class="hidden md:inline-block text-sm text-gray-600">{job.badge}</span>
+              <a href={`#job-${job.id}`} class="inline-block bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition">Saber más</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+</Layout>

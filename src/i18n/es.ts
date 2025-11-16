@@ -75,7 +75,7 @@ export default {
     title: "Nuestra clínica",
     desc: "Horario de atención",
     termin: "Lunes – Jueves: 08:00 – 18:00, Viernes: 08:00 – 14:00",
-    address: "Nuestra clínica moderna y funcional en Hansastraße 8B, 14612 Falkensee, está totalmente equipada. Un equipo amable le recibirá. Disponemos de estacionamiento en la puerta y la parada de autobús más cercana está a pocos minutos a pie."
+    address: "Nuestras clínicas modernas y funcionalmente equipadas, ubicadas en Hansastraße 8B, 14612 Falkensee, y en Adlerstraße 46–48, 14612 Falkensee, cuentan con excelentes instalaciones y ofrecen un ambiente agradable. Será atendido por un equipo amable. Hay estacionamiento disponible directamente en cada ubicación, y las paradas de autobús más cercanas se encuentran a pocos minutos a pie."
   },
     aboutUs: {
     title: "Sobre nosotros",
@@ -101,8 +101,10 @@ export default {
     send: "Enviar",
     success: "Mensaje enviado correctamente",
     addressTitle: "Dirección",
-    addressDesc: "Hansastraße 8B<br/> 14612 Falkensee",
+    addressDesc: "Hansastraße 8B 14612 Falkensee",
+    addressDesc2: "Adlerstraße 46-48 14612 Falkensee",
     reference: "(Cerca de la parada de autobús Bahnhofstraße)",
+    reference2: "(Frente a Pegasus Apotheke)",
     phoneTitle: "Teléfono",
     phoneDesc: "+49 3322 4229808",
     emailTitle: "Correo electrónico",
