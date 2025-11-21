@@ -1,0 +1,101 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import type { Language } from "../../../types/language.type";
+import de from "../../../i18n/de";
+import es from "../../../i18n/es";
+import en from "../../../i18n/en";
+import it from "../../../i18n/it";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } },
+    { params: { lang: "es" } },
+    { params: { lang: "it" } },
+  ];
+}
+
+const lang = Astro.params.lang as Language;
+const translations = { de, en, es, it };
+const t = translations[lang];
+---
+
+<Layout lang={lang} t={t} title="Job Info - Esther Trenner Podologie">
+  <section class="flex-1 w-full bg-1 flex items-center justify-center">
+    <div class="max-w-4xl mx-auto px-4 py-10 w-full">
+      <div class="bg-white rounded-lg shadow p-6 md:p-10">
+        <h1 class="text-3xl font-bold mb-4">{t.info.title}</h1>
+        <p class="text-gray-600 mb-6">
+          {t.info.description}
+        </p>
+
+        <div class="space-y-4">
+          <!-- DESCRIPCIÓN DEL PUESTO -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">{t.info.h2}</h2>
+            <p class="text-gray-700">
+              {t.info.p1}
+            </p>
+            <p class="text-gray-700 mt-2">
+              {t.info.p2}
+            </p>
+          </div>
+
+          <!-- REQUISITOS -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">{t.info.h3}</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>{t.info.li1}</li>
+              <li>
+                {t.info.li2}
+              </li>
+              <li>
+                {t.info.li3}
+              </li>
+              <li>
+                {t.info.li4}
+              </li>
+              <li>{t.info.li5}</li>
+            </ul>
+          </div>
+
+          <!-- BENEFICIOS -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">{t.info.h4}</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>
+                {t.info.bl1}
+              </li>
+              <li>{t.info.bl2}</li>
+              <li>
+                {t.info.bl3}
+              </li>
+              <li>{t.info.bl4}</li>
+              <li>
+                {t.info.bl5}
+              </li>
+            </ul>
+          </div>
+
+          <!-- INFORMACIÓN ADICIONAL -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">{t.info.h5}</h2>
+            <p class="text-gray-700">
+              {t.info.p3}
+            </p>
+          </div>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="mt-8 flex gap-4">
+          <a
+            href={`/${lang}/jobs`}
+            class="inline-block bg-gray-200 text-gray-700 px-6 py-2 rounded-md hover:bg-gray-300 transition"
+          >
+            {t.info.back}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

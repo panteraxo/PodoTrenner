@@ -1,0 +1,55 @@
+---
+const { title, button, description } = Astro.props;
+---
+
+<div
+  id="modal"
+  class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-[9999]"
+>
+  <div
+    id="modalContent"
+    class="bg-[url('/images/a12.webp')] bg-cover bg-center gap-20 p-6 rounded-lg w-[80vw] h-[80vh] shadow-lg relative z-[10000] overflow-y-auto flex items-center flex-col justify-center border-white"
+  >
+    <button
+      id="closeBtn"
+      class="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
+    >
+      &times;
+    </button>
+
+    <h2 class="text-3xl font-bold mb-4 text-white">{title}</h2>
+    <p class="text-white text-2xl">
+      {description}
+    </p>
+    <a
+      href="/de/jobs"
+      class="inline-block bg-gray-100 text-3 font-semibold font-jost px-6 py-3 rounded-full shadow-md hover:bg-5 transition"
+    >
+      {button}
+    </a>
+  </div>
+</div>
+
+<script>
+  // Esperar a que el DOM cargue completamente
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modal");
+    const closeBtn = document.getElementById("closeBtn");
+    const modalContent = document.getElementById("modalContent");
+
+    // Mostrar modal automáticamente
+    modal.classList.remove("hidden");
+
+    // Cerrar con la X
+    closeBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    // Cerrar clickeando fuera del contenido
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  });
+</script>

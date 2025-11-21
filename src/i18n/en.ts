@@ -139,6 +139,42 @@ export default {
         faq: "FAQ",
         privacy: "Privacy Policy",
         impressum: "Legal Notice",
-        allRights: "© 2025 Esther Trenner Podiatry. All rights reserved."
-    }
+        allRights: "© 2025 Esther Trenner Podiatry. All rights reserved.",
+        job: "Join us"
+    },
+    jobs:{
+    title: "Job Offers",
+    intro: "Join our team and contribute to the health and well-being of our patients. We offer a professional, modern, and welcoming work environment with opportunities for development and continuous training.",
+    search: "Podiatrist",
+    ubication: "Falkensee",
+    schedule: "Full-time",
+    button: "Learn more"
+  },
+  info:{
+    title: "Job Offer: Podiatrist",
+    description: "We are looking for a podiatrist with at least one year of experience to join our team in Falkensee.",
+    h2:"Job Description",
+    p1:"We are seeking a professional podiatrist to work in our clinics located at Hansastraße 8B and Adlerstraße 46–48, 14612 Falkensee. The selected candidate must have at least one year of experience in a similar position, demonstrate responsibility, empathy, good patient care, and the ability to work both independently and as part of a team.",
+    p2:"Main duties include direct patient care, proper documentation of treatments, and collaboration with other healthcare professionals.",
+    h3:"Requirements",
+    li1:"Complete professional training in Podiatry.",
+    li2:"At least 1 year of experience in podiatric clinics or practices.",
+    li3:"Knowledge of treatments such as basic podiatric care, management of ingrown nails, calluses, and care for diabetic patients.",
+    li4:"Good patient orientation and communication skills.",
+    li5:"Ability to work independently and as part of a team.",
+    h4:"Benefits",
+    bl1:"Stable contract in a professional and well-equipped environment.",
+    bl2:"Pleasant working atmosphere with a friendly team.",
+    bl3:" Opportunities for continuous training and professional development.",
+    bl4:"Flexible working hours as agreed.",
+    bl5:"Excellent location with parking options and nearby public transportation.",
+    h5:"How to Apply",
+    p3:"If you meet the requirements and are interested in joining our team, please send your updated resume and a cover letter to info@podo-trenner.de",
+    back: "Back"
+  },
+  modal:{
+    title:"We are looking for a podiatrist",
+    description:"We are expanding our team. Are you a certified podiatrist? Apply today!",
+    button:"Apply",
+  }
 }

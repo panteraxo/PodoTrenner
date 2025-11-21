@@ -21,27 +21,22 @@ const t = translations[lang];
 const jobs = [
   {
     id: "j3",
-    title: "Podólogo/a",
-    location: "Falkensee",
-    badge: "Tiempo completo",
+    title: t.jobs.search,
+    location: t.jobs.ubication,
+    badge: t.jobs.schedule  ,
   },
-  {
-    id: "j4",
-    title: "Podólogo/a",
-    location: "Falkensee",
-    badge: "Tiempo completo",
-  },
+  
 ];
 ---
 
 <Layout lang={lang} t={t} title="Jobs - Esther Trenner Podologie">
-  <section class="max-w-7xl mx-auto px-4 py-10">
-  <div class="grid gap-8 grid-cols-1 lg:grid-cols-3">
+  <section class="flex-1 w-full bg-1 flex items-center">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid gap-8 grid-cols-1 lg:grid-cols-3 w-full ">
     <!-- Left: jobs list (2/3 width on large screens) -->
-    <div class="lg:col-span-2 space-y-6">
+    <div class="lg:col-span-3 space-y-6 w-full ">
       <div class="bg-white rounded-lg shadow p-6">
-        <h1 class="text-2xl font-semibold mb-2">{t?.jobs?.title ?? 'Ofertas de empleo'}</h1>
-        <p class="text-gray-600">{t?.jobs?.intro ?? 'Únete a nuestro equipo...'}</p>
+        <h1 class="text-2xl font-semibold mb-2">{t.jobs.title}</h1>
+        <p class="text-gray-600">{t.jobs.intro}</p>
       </div>
 
       <!-- Job items -->
@@ -65,7 +60,7 @@ const jobs = [
 
             <div class="flex items-center gap-4">
               <span class="hidden md:inline-block text-sm text-gray-600">{job.badge}</span>
-              <a href={`#job-${job.id}`} class="inline-block bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition">Saber más</a>
+              <a href={`/${lang}/jobs/info`} class="inline-block bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition">{t.jobs.button}</a>
             </div>
           </article>
         ))}

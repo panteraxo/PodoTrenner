@@ -138,6 +138,42 @@ export default {
         faq: "FAQ",
         privacy: "Informativa sulla privacy",
         impressum: "Note legali",
-        allRights: "© 2025 Podologia Esther Trenner. Tutti i diritti riservati."
-    }
+        allRights: "© 2025 Podologia Esther Trenner. Tutti i diritti riservati.",
+        job: "Unisciti a noi"
+    },
+    jobs:{
+    title: "Offerte di lavoro",
+    intro: "Unisciti al nostro team e contribuisci alla salute e al benessere dei nostri pazienti. Offriamo un ambiente di lavoro professionale, moderno e accogliente, con opportunità di sviluppo e formazione continua.",
+    search: "Podologo/a",
+    ubication: "Falkensee",
+    schedule: "Tempo pieno",
+    button: "Scopri di più"
+  },
+  info:{
+    title: "Offerta di lavoro: Podologo/a a Falkensee",
+    description: "Siamo alla ricerca di un/a podologo/a professionista per unirsi al nostro team nelle nostre cliniche situate in Hansastraße 8B e Adlerstraße 46–48, 14612 Falkensee.",
+    h2:"Descrizione del lavoro",
+    p1:"Come podologo/a, sarai responsabile della diagnosi, del trattamento e della prevenzione di malattie e disturbi dei piedi e delle gambe. Lavorerai a stretto contatto con i pazienti per fornire cure personalizzate e migliorare la loro qualità di vita.",
+    p2:"Tra le principali responsabilità vi sono l'assistenza diretta ai pazienti, la documentazione accurata dei trattamenti e la collaborazione con altri professionisti della salute.",
+    h3:"Requisiti",
+    li1:"Formazione professionale completa in Podologia.",
+    li2:"Almeno 1 anno di esperienza in cliniche o studi podologici.",
+    li3:"Conoscenza di trattamenti come cura podologica di base, gestione delle unghie incarnite, callosità e assistenza a pazienti diabetici.",
+    li4:"Buona orientazione al paziente e capacità comunicative.",
+    li5:"Capacità di lavorare in modo autonomo e in team.",
+    h4:"Benefici",
+    bl1:"Contratto stabile in un ambiente professionale e ben attrezzato.",
+    bl2:"Ambiente di lavoro piacevole con un team cordiale.",
+    bl3:"Opportunità di formazione continua e sviluppo professionale.",
+    bl4:"Orari flessibili secondo accordi.",
+    bl5:"Eccellente posizione con opzioni di parcheggio e trasporti nelle vicinanze.",
+    h5:"Come candidarsi",
+    p3:"Se soddisfi i requisiti e sei interessato/a a far parte del nostro team, invia il tuo curriculum aggiornato e una lettera di presentazione a info@podo-trenner.de",
+    back: "Torna alle offerte di lavoro"
+  },
+  modal:{
+    title:"Cerchiamo un podologo/una podologa",
+    description:"Stiamo ampliando il nostro team. Sei un/a podologo/a certificato/a? Candidati oggi stesso!",
+    button:"Candidati",
+  }
 }

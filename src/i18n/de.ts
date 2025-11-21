@@ -174,8 +174,45 @@ export default {
         faq:"FAQ",
         privacy:"Datenschutz",
         impressum:"Impressum",
-        allRights:"© 2025 Esther Trenner Podologie. Alle Rechte vorbehalten."
+        allRights:"© 2025 Esther Trenner Podologie. Alle Rechte vorbehalten.",
+        job:"Arbeiten bei uns"
 
-    }
+    },
+    jobs:{
+    title: "Stellenangebote",
+    intro: "Treten Sie unserem Team bei und tragen Sie zur Gesundheit und zum Wohlbefinden unserer Patienten bei. Wir bieten ein professionelles, modernes und angenehmes Arbeitsumfeld mit Möglichkeiten zur Weiterentwicklung und kontinuierlichen Weiterbildung.",
+    search: "Podologe/Podologin",
+    ubication: "Falkensee",
+    schedule: "Vollzeit",
+    button: "Mehr erfahren"
+  },
+  info:{
+    title: "Stellenangebot: Podologe/Podologin",
+    description: "Wir suchen eine/n engagierte/n Podologe/Podologin zur Verstärkung unseres Teams in Falkensee.",
+    h2:"Stellenbeschreibung",
+    p1:"Als Podologe/Podologin sind Sie verantwortlich für die Untersuchung, Behandlung und Prävention von Fuß- und Beinerkrankungen bei unseren Patienten. Sie arbeiten eng mit anderen Gesundheitsfachkräften zusammen, um eine umfassende Versorgung zu gewährleisten.",
+    p2:"Zu den Hauptaufgaben gehören die direkte Patientenbetreuung, die ordnungsgemäße Dokumentation der Behandlungen und die Zusammenarbeit mit anderen Gesundheitsfachkräften.",
+    h3:"Anforderungen",
+    li1:"Abgeschlossene Berufsausbildung in der Podologie.",
+    li2:"Mindestens 1 Jahr Erfahrung in podologischen Kliniken oder Praxen.",
+    li3:"Kenntnisse in Behandlungen wie Basis-Pflege, Umgang mit eingewachsenen Nägeln, Hornhaut und Betreuung von Diabetikern.",
+    li4:"Gute Patientenorientierung und Kommunikationsfähigkeiten.",
+    li5:"Fähigkeit, selbstständig und im Team zu arbeiten.",
+    h4:"Vorteile",
+    bl1:"Unbefristeter Vertrag in einem professionellen und gut ausgestatteten Umfeld.",
+    bl2:"Angenehmes Arbeitsklima mit einem freundlichen Team.",
+    bl3:"Möglichkeiten zur kontinuierlichen Weiterbildung und beruflichen Entwicklung.",
+    bl4:"Flexible Arbeitszeiten nach Vereinbarung.",
+    bl5:"Ausgezeichnete Lage mit Parkmöglichkeiten und guter Anbindung an den öffentlichen Nahverkehr.",
+    h5:"Bewerbung",
+    p3:"Wenn Sie die Anforderungen erfüllen und Teil unseres Teams werden möchten, senden Sie bitte Ihren aktuellen Lebenslauf und ein Anschreiben an info@podo-trenner.de",
+    back: "Zurück zu den Stellenangeboten",
+    
+  },
+  modal:{
+    title:"Wir suchen Podologe/Podologin",
+    description:"Wir erweitern unser Team. Sind Sie ein/e zertifizierte/r Podologe/Podologin? Bewerben Sie sich noch heute!",
+    button:"Bewerben",
+  }
     
 }

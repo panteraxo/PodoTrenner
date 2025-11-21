@@ -28,7 +28,7 @@ const languages = [
     <title>{title}</title>
     <link rel="icon" href="/images/logopodo.webp" type="image/webp" />
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <Navbar
       client:load
       home={t.nav.home}
@@ -40,7 +40,9 @@ const languages = [
       currentLang={lang}
       languageLabel={t.languageLabel}
     />
-    <slot />
+    <main class="flex-1 flex flex-col">
+      <slot />
+    </main>
     <Footer
       address={t.footer.address}
       phone={t.footer.phone}
@@ -59,6 +61,7 @@ const languages = [
       currentLang={lang}
       range3={t.footer.range3}
       range4={t.footer.range4}
+      info={t.footer.job}
     />
   </body>
 </html>

@@ -17,6 +17,7 @@ const {
   impressum,
   allRights,
   currentLang,
+  info,
 } = Astro.props;
 
 // Función para generar href dinámico manteniendo el idioma
@@ -90,6 +91,11 @@ const getPageHref = (page: string) => {
             </li>
             <li class="mb-1">
               <a href="#faq" class="hover:underline">{faq}</a>
+            </li>
+            <li>
+              <a href={getPageHref("/jobs")} class="hover:underline text-black"
+                >{info}</a
+              >
             </li>
           </ul>
         </div>
