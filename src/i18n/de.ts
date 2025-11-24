@@ -134,7 +134,7 @@ export default {
         addressDesc2:["Adlerstraße 46-48",
                     " 14612 Falkensee",],
         reference:"(In der Nähe der Bushaltestelle Bahnhofstraße)",
-        reference2:"(Gegenüber von Pegasus Apotheke)",
+        reference2:"(Über der Pegasus Apotheke)",
         phoneTitle:"Telefon",
         phoneDesc:"+49 3322 4229808",
         emailTitle:"E-Mail",

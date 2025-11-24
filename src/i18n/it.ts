@@ -102,7 +102,7 @@ export default {
         addressDesc: "Hansastraße 8B 14612 Falkensee",
         addressDesc2: "Adlerstraße 46-48 14612 Falkensee",
         reference: "(Vicino alla fermata dell’autobus Bahnhofstraße)",
-        reference2: "(Di fronte alla farmacia Pegasus)",
+        reference2: "(Sopra la farmacia Pegasus.)",
         phoneTitle: "Telefono",
         phoneDesc: "+49 3322 4229808",
         emailTitle: "Email",
