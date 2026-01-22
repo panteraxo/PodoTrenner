@@ -79,6 +79,7 @@ export default {
     aboutUs: {
         title: "About Us",
         subtitle: "We are a podiatry center dedicated to the health and well-being of your feet. Our goal is to offer safe, effective, and personalized treatments – with professionalism, modern technology, and personal service.",
+        subtitle2: "We are a podiatry center dedicated to the health and well-being of your feet",
         title2: "About Me",
         description: ["My name is Esther Trenner, and I am a state-certified podiatrist.I completed my training in September 2020 at the renowned D&B School of Podiatry in Berlin and have extensive experience in treating foot and leg conditions. My passion for foot health drives me to stay up to date with the latest techniques and to provide my patients with the best possible care.",
         "I hold official certificates in medical foot care and podiatric therapy, issued by recognized institutions in Germany. With my experience and expertise, I help people not only relieve discomfort but also improve their quality of life.",

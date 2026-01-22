@@ -103,6 +103,7 @@ export default {
     aboutUs:{
         title:"Über uns",
         subtitle:"Wir sind ein auf Podologie spezialisiertes Zentrum, das sich der Gesundheit und dem Wohlbefinden Ihrer Füße widmet. Unser Ziel ist es, sichere, wirksame und auf jede Person zugeschnittene Behandlungen anzubieten - mit Professionalität, moderner Technik und einem persönlichen Service.",
+        subtitle2:"Wir sind ein auf Podologie spezialisiertes Zentrum, das sich der Gesundheit und dem Wohlbefinden Ihrer Füße widmet.",
         title2:"Über mich",
         description:
                     [

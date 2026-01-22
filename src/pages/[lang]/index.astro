@@ -68,6 +68,7 @@ const t = translations[lang];
   <AboutMe
     title={t.aboutUs.title}
     subtitle={t.aboutUs.subtitle}
+    subtitle2={t.aboutUs.subtitle2}
     title2={t.aboutUs.title2}
     description={t.aboutUs.description}
     content={t.aboutUs.content}
@@ -128,7 +129,7 @@ const t = translations[lang];
 
               // Para p5-p10, no aplicar animaciones en pantallas pequeñas
               const isP5ToP10 = ["p5", "p6", "p7", "p8", "p9", "p10"].includes(
-                target.id
+                target.id,
               );
 
               if (isP5ToP10 && isSmallScreen) {
@@ -160,7 +161,7 @@ const t = translations[lang];
         },
         {
           threshold: 0.1,
-        }
+        },
       );
 
       const p1 = document.getElementById("p1");

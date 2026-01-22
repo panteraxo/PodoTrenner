@@ -79,6 +79,7 @@ export default {
     aboutUs: {
         title: "Chi siamo",
         subtitle: "Siamo un centro di podologia dedicato alla salute e al benessere dei vostri piedi. Il nostro obiettivo è offrire trattamenti sicuri, efficaci e personalizzati – con professionalità, tecnologia moderna e servizio personalizzato.",
+        subtitle2: "Siamo un centro di podologia dedicato alla salute e al benessere dei vostri piedi.",
         title2: "Chi sono",
         description: ["Mi chiamo Esther Trenner e sono podologa certificata dallo Stato.Ho completato la mia formazione nel settembre 2020 presso la rinomata Scuola D&B di Podologia a Berlino e possiedo una vasta esperienza nel trattamento delle patologie del piede e della gamba. La mia passione per la salute del piede mi spinge a rimanere sempre aggiornata sulle tecniche più recenti e a offrire ai miei pazienti la migliore assistenza possibile.",
         "Possiedo certificati ufficiali in pedicure medicale e terapia podologica, rilasciati da istituzioni riconosciute in Germania. Con la mia esperienza e competenza, aiuto le persone non solo ad alleviare i disturbi, ma anche a migliorare la loro qualità di vita.",

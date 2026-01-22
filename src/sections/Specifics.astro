@@ -523,7 +523,7 @@ c-3 -52 -10 -108 -14 -123 l-8 -29 -18 21 c-18 19 -18 27 -7 108 6 49 14 103
       descriptions.forEach((paragraph) => {
         const p = document.createElement("p");
         p.textContent = paragraph.trim();
-        p.className = "mb-4 last:mb-0"; // Espaciado entre párrafos
+        p.className = "mb-4 last:mb-0 text-justify"; // Espaciado entre párrafos
         modalDescription.appendChild(p);
       });
 
