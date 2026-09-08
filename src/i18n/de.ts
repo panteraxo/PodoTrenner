@@ -137,7 +137,7 @@ export default {
         reference:"(In der Nähe der Bushaltestelle Bahnhofstraße)",
         reference2:"(Über der Pegasus Apotheke)",
         phoneTitle:"Telefon",
-        phoneDesc:"+49 3322 4229808",
+        phoneDesc:"+49 3322 2309125",
         emailTitle:"E-Mail",
         emailDesc:"info@podo-trenner.de",
     },
