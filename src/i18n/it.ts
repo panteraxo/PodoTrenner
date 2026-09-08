@@ -105,7 +105,7 @@ export default {
         reference: "(Vicino alla fermata dell’autobus Bahnhofstraße)",
         reference2: "(Sopra la farmacia Pegasus.)",
         phoneTitle: "Telefono",
-        phoneDesc: "+49 3322 4229808",
+        phoneDesc: "+49 3322 2309125",
         emailTitle: "Email",
         emailDesc: "info@podo-trenner.de"
     },
@@ -125,7 +125,7 @@ export default {
     },
     footer: {
         address: ["Hansastr. 8 B 14612 "," Falkensee"],
-        phone: "03322 42 29 808",
+        phone: "03322 23 09 125",
         email: "info@podo-trenner.de",
         addressOpen: "Orari di apertura",
         range: "Dal lunedì al giovedì",
